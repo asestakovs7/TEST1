@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+    function przd(){
+        let a=1
+        let b=1.34;
+        let c="teksts";
+        let d=true;
+        document.getElementById("result").innerHTML="Mainiga a vertiba ir "+a+" un tips: "+ typeof(a);
+        document.getElementById("result1").innerHTML="Mainiga a vertiba ir "+b+" un tips: "+ typeof(b);
+        document.getElementById("result2").innerHTML="Mainiga a vertiba ir "+c+" un tips: "+ typeof(c);
+        document.getElementById("result3").innerHTML="Mainiga a vertiba ir "+d+" un tips: "+ typeof(d);
+    }
+    function otraisUzdevums(){
+        let a;
+        a = document.getElementById("ievadesLauks").value;
+        console.log(document.getElementById("ievadesLauks").value);
+    }
+    function truzd(){
+        let a;
+        a = prompt("Ievade teks zem pogas","")
+        document.getElementById("res1").innerHTML=a;
+    }
+    function ctruzd(){
+       let num=25;
+       let txt='4';
+       let sum=num+Number(txt);
+       console.log("ņumber + text ir " + sum)
+    }
+    function ptuzd(){
+       let a;
+       let b;
+       let c;
+       a=prompt("Pirmais mainiga, a= ","0");
+       b=prompt("Otrais mainiga, b= ","0");
+       let text="Lietojas ievadija a="+a+",b="+b+"<br>";
+       c=a;
+       a=b;
+       b=c;
+       text=text + " Pamaiņa lietojas ievadija a="+a+",b="+b;
+       document.getElementById("td").innerHTML=text;
+       document.getElementById("tt").innerHTML=text;
+    }
+    //Glob mainigie
+    let s=10;
+    let x;
+    function sepuzd(){
+        let c = Number(prompt("Ievadi skaitlu ", 0));
+        console.log("Lokalais mainigais c="+c);
+        console.log("Globalais mainigais s="+s);
+
+    }
+    </script>
+</head>
+    <body>
+        <h1>Konrole darbi</h1>
+        <h1>Pirma uzdevums</h1>
+    <input type="button" value="1zud" onclick="przd()">
+    <p id="result">1 uzd ris</p>
+    <p id="result1">1 uzd ris</p>
+    <p id="result2">1 uzd ris</p>
+    <p id="result3">1 uzd ris</p>
+    
+        <h1> Otra Uzdevums </h1>
+<input type="text" value="Ievades lauks"  id="ievadesLauks"  >
+ <input type="button" value="Click" onclick="otraisUzdevums()">
+ <p>Skaties console</p>
+
+ <h1> Treša uzdevums </h1>
+<input type="button" value="3" onclick="truzd()">
+<div id="res1">3 uzdevuma risinajums</div>
+
+<h1> Ceturtais uzdevums </h1>
+<input type="button" value="4" onclick="ctruzd()">
+<p>4 uzdevuma risinajums(skaties console)</p>
+
+<h1> Piektais uzdevums </h1>
+<input type="button" value="52" onclick="ptuzd()">
+<p id="td">1</p>
+<p id="tt">2</p>
+<h1> Sestais uzdevums </h1>
+<input type="button" value="7" onclick="sepuzd()">
+
+        </body>
+</html>
